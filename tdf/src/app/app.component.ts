@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as moment from 'moment';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,7 @@ export class AppComponent {
   topics = ['Angular', 'React', 'Vue'];
 
   dateStampDp: any;
+
+  userModel = new User('Rob', 'rob@test.com', 55667788, '', 'morning', true);
+
 }
