@@ -12,6 +12,6 @@ export class AppComponent {
 
   dateStampDp: any;
 
-  userModel = new User('Rob', 'rob@test.com', 55667788, '', 'morning', true);
+  userModel = new User('', 'rob@test.com', 55667788, '', 'morning', true);
 
 }
