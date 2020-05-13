@@ -13,6 +13,7 @@ export class AppComponent {
   topicHasError = true;
   submitted = false;
   dateStampDp: any;
+  errorMsg = '';
 
   userModel = new User('Rob', 'rob@test.com', 5556665656, 'default', 'morning', true);
 
@@ -31,7 +32,7 @@ export class AppComponent {
     this._enrollmentService.enroll(this.userModel)
       .subscribe(
         data => console.log('Success!', data),
-        error => console.log('Error!', error)
+        error => this.errorMsg = error.statusText
       )
   }
 }
